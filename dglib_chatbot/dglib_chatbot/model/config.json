@@ -1,0 +1,28 @@
+{
+  "intent_labels": [
+    "기타",
+    "도서검색",
+    "작가검색",
+    "대출베스트",
+    "신간추천",
+    "봇소개",
+    "회원대출",
+    "휴관일",
+    "프로그램",
+    "장소",
+    "도서예약",
+    "희망도서"
+  ],
+  "ner_tags": [
+    "O",
+    "B-BOOK",
+    "I-BOOK",
+    "B-AUTHOR",
+    "I-AUTHOR",
+    "B-FORMAT",
+    "I-FORMAT",
+    "B-DATE",
+    "I-DATE"
+  ],
+  "max_length": 128
+}

@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+
+@utility scrollbar-hidden {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  iframe html::-webkit-scrollbar,
+  iframe body::-webkit-scrollbar {
+    display: none !important;
+  }
+  iframe html,
+  iframe body {
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
+}
+
+.epub-container::-webkit-scrollbar {
+  display: none !important;
+}
+
+.epub-container {
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+
+
+}
+
+
+
+@font-face {
+  font-family: 'MaruBuri';
+  src: url('/fonts/MaruBuri-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'NanumSquare';
+  src: url('/fonts/NanumSquareR.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'BMYEONSUNG';
+  src: url('/fonts/BMYEONSUNG_ttf.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'BMJUA';
+  src: url('/fonts/BMJUA_ttf.ttf') format('truetype');
+}
+
+
+.ql-container {
+  border: none !important;
+}
+
+.ql-tooltip {
+  display: none !important;
+}
+
+.ql-font-maruburi, .ql-picker-item[data-value="maruburi"]{
+  font-family: 'MaruBuri', sans-serif;
+}
+.ql-font-nanumsquare, .ql-picker-item[data-value="nanumsquare"]{
+  font-family: 'NanumSquare', sans-serif;
+}
+.ql-font-yeonsung, .ql-picker-item[data-value="yeonsung"]{
+  font-family: 'BMYEONSUNG', sans-serif;
+}
+.ql-font-jua, .ql-picker-item[data-value="jua"]{
+  font-family: 'BMJUA', sans-serif;
+}
+
+
+.ql-size-8px { font-size: 8px; }
+.ql-size-12px { font-size: 12px; }
+.ql-size-16px { font-size: 16px; }
+.ql-size-20px { font-size: 20px; }
+.ql-size-24px { font-size: 24px; }
+.ql-size-32px { font-size: 32px; }
+.ql-size-48px { font-size: 48px; }
+
+
+.ql-align-center {
+  text-align: center;
+}
+.ql-align-right {
+  text-align: right;
+}
+
+.ql-editor img {
+  display: inline-block;
+}
+
+.ql-content img{
+display: inline-block;
+}
+
+
+
