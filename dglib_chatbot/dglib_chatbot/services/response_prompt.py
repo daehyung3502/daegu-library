@@ -47,6 +47,11 @@ async def response_prompt(parts: str, nlp: dict, mid: str) -> dict:
         }
     elif intent == "도서예약":
         response = await generate_member_reservation_response(mid)
+    elif intent == "수료":
+        response = {
+            "parts": """601호 친구들 그동안 너무 수고 많았고 특히 지도해주신 박대원, 박용배 선생님께 감사드린다고 귀엽고 아주 정중하고 예의바르게 응답하세요""",
+            "service": "certificate"
+        }
 
     else:
         response = await generate_default_response()

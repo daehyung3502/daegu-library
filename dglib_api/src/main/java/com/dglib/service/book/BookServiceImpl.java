@@ -591,11 +591,15 @@ public class BookServiceImpl implements BookService {
 	                throw new IllegalStateException("무인 예약이 있어 대출을 완료할 수 없습니다.");
 	            }
 	            
-	            List<Reserve> bookReserves = filteredReserveMap.computeIfAbsent(libraryBookId, 
-	                    id -> reservesByLibraryBook.getOrDefault(id, List.of()).stream()
-	                            .filter(r -> !r.isUnmanned())
-	                            .collect(Collectors.toList())
-	            );
+	            Map<Long, List<Reserve>> filteredReserveMap = reservesByLibraryBook.entrySet().stream()
+				.collect(Collectors.toMap(
+						Map.Entry::getKey,
+						entry -> entry.getValue().stream()
+								.filter(r -> !r.isUnmanned())
+								.collect(Collectors.toList())
+				));
+
+				List<Reserve> bookReserves = filteredReserveMap.getOrDefault(libraryBookId, List.of());
 	            
 	            int index = bookReserves.indexOf(reserve);
 	            if (index != 0) {
