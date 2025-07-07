@@ -594,8 +594,6 @@ public class BookServiceImpl implements BookService {
 	             List<Reserve> bookReserves = allBookReserves.stream()
 				.filter(r -> !r.isUnmanned())
 				.collect(Collectors.toList());
-
-				List<Reserve> bookReserves = filteredReserveMap.getOrDefault(libraryBookId, List.of());
 	            
 	            int index = bookReserves.indexOf(reserve);
 	            if (index != 0) {
